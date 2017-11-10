@@ -1,12 +1,12 @@
 ---
  - hosts: all
-   sudo: no
+   become: no
    gather_facts: yes
 
  - hosts: localhost
    connection: local
    gather_facts: yes
-   sudo: false
+   become: no
    vars:
      # Comment if you want to use ansible_ssh_user or ansible_user_id
      ssh_user: username
